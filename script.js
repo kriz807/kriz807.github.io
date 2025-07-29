@@ -216,3 +216,28 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     });
 });
 
+// Certificate modal functionality
+const certificateItems = document.querySelectorAll("[data-certificate-item]");
+const certificateModalContainer = document.querySelector("[data-certificate-modal]");
+const certificateModalCloseBtn = document.querySelector("[data-certificate-close-btn]");
+const certificateOverlay = document.querySelector("[data-certificate-overlay]");
+
+const modalCertificateImg = document.querySelector("[data-modal-certificate-img]");
+const modalCertificateTitle = document.querySelector("[data-modal-certificate-title]");
+const modalCertificateText = document.querySelector("[data-modal-certificate-text]");
+
+
+function openPopup(img, title, desc) {
+  document.getElementById("popup-img").src = img;
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-desc").innerText = desc;
+  document.getElementById("popup").style.display = "flex";
+
+  document.body.classList.add("modal-open"); // ✅ Lock scroll
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+
+  document.body.classList.remove("modal-open"); // ✅ Unlock scroll
+}
