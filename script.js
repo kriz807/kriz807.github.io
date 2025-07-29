@@ -245,17 +245,27 @@ function closePopup() {
 
 const hamburger = document.getElementById('hamburger-btn');
 const navbarMenu = document.getElementById('navbar-menu');
+const navLinks = document.querySelectorAll('.navbar-link');
 
+// Toggle menu on hamburger click
 hamburger.addEventListener('click', (e) => {
   e.stopPropagation();
   hamburger.classList.toggle('open');
   navbarMenu.classList.toggle('active');
 });
 
-// Close menu when clicking outside
+// Close menu on outside click
 document.addEventListener('click', function (e) {
   if (!navbarMenu.contains(e.target) && !hamburger.contains(e.target)) {
     hamburger.classList.remove('open');
     navbarMenu.classList.remove('active');
   }
+});
+
+// Close menu on link click
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navbarMenu.classList.remove('active');
+  });
 });

@@ -461,13 +461,7 @@ main {
   align-items: center;
 }
 
-.navbar-brand {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--orange-yellow-crayola);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+
 
 /* Navbar Links */
 .navbar-list {
