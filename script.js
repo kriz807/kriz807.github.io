@@ -243,3 +243,19 @@ function closePopup() {
 }
 
 
+const hamburger = document.getElementById('hamburger-btn');
+const navbarMenu = document.getElementById('navbar-menu');
+
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  hamburger.classList.toggle('open');
+  navbarMenu.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function (e) {
+  if (!navbarMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    hamburger.classList.remove('open');
+    navbarMenu.classList.remove('active');
+  }
+});
