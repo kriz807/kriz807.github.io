@@ -241,3 +241,5 @@ function closePopup() {
 
   document.body.classList.remove("modal-open"); // ✅ Unlock scroll
 }
+
+

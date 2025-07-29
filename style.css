@@ -459,7 +459,7 @@ body {
 
 .navbar-list {
   display: flex;
-  justify-content: space-between; /* Spread items from left to right */
+  justify-content: center; /* Spread items from left to right */
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
